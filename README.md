@@ -1,7 +1,10 @@
 # CodigoStack :technologist: :woman_technologist:	
 Under construction
 
-## 💻 Technologies
+# Functionalities :floppy_disk:
+
+
+# 💻 Technologies
 
 - Git / Github
 - Java
