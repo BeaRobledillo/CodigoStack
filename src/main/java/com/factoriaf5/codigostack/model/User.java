@@ -1,4 +1,4 @@
-package com.factoriaf5.codigostack.user;
+package com.factoriaf5.codigostack.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

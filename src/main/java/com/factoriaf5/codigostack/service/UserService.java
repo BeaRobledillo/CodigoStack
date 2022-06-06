@@ -1,4 +1,4 @@
-package com.factoriaf5.codigostack.user;
+package com.factoriaf5.codigostack.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
