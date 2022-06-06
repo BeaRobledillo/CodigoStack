@@ -1,16 +1,24 @@
 package com.factoriaf5.codigostack.user;
 
-import org.springframework.security.core.userdetails.UserDetails;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import java.io.Serial;
-import java.io.Serializable;
 
+import java.time.Instant;
+
+@Data
 @Entity
-public class User implements Serializable, UserDetails {
+@AllArgsConstructor
+@NoArgsConstructor
+public class User   {
 
     @Serial
     private static final Long serialVersionUID = 1L;
@@ -21,11 +29,6 @@ public class User implements Serializable, UserDetails {
     private String password;
     @Email
     private String email;
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private Instant created;
+    private boolean enabled;
 }
