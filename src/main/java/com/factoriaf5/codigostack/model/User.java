@@ -5,22 +5,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serial;
 
 import java.time.Instant;
+import java.util.Collection;
 
-@Data
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 public class User   {
 
-    @Serial
     private static final Long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +28,17 @@ public class User   {
     private String email;
     private Instant created;
     private boolean enabled;
+    @OneToMany(mappedBy = "user")
+    private Collection<Comment> comment;
+
+    @OneToMany(mappedBy = "user")
+    private Collection<Post> post;
+
+    public Collection<Post> getPost() {
+        return post;
+    }
+
+    public void setPost(Collection<Post> post) {
+        this.post = post;
+    }
 }

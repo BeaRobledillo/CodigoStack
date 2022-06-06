@@ -10,11 +10,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 import java.time.Instant;
+import java.util.Collection;
 
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.SEQUENCE;
 
-@Data
+
 @Entity
 @Builder
 @AllArgsConstructor
@@ -33,8 +34,18 @@ public class Post {
     private String description;
     private Integer voteCount;
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
+
     private User user;
     private Instant createdDate;
 
+    @OneToMany(mappedBy = "post")
+    private Collection<Comment> comment;
+
+    public Collection<Comment> getComment() {
+        return comment;
+    }
+
+    public void setComment(Collection<Comment> comment) {
+        this.comment = comment;
+    }
 }
