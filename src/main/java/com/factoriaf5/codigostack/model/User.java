@@ -1,33 +1,32 @@
 package com.factoriaf5.codigostack.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
-import java.io.Serial;
-
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.time.Instant;
 
-@Data
-@Entity
+import static javax.persistence.GenerationType.SEQUENCE;
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User   {
-
-    @Serial
-    private static final Long serialVersionUID = 1L;
+@Entity
+public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = SEQUENCE)
+    private Long userId;
+    @NotBlank(message = "Username is required")
     private String username;
+    @NotBlank(message = "Password is required")
     private String password;
     @Email
+    @NotEmpty(message = "Email is required")
     private String email;
     private Instant created;
     private boolean enabled;
