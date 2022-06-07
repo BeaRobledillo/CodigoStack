@@ -1,16 +1,15 @@
 package com.factoriaf5.codigostack.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.time.Instant;
+import java.util.Set;
 
-import static javax.persistence.GenerationType.SEQUENCE;
 
 @Getter
 @Setter
@@ -19,8 +18,8 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Entity
 public class User {
     @Id
-    @GeneratedValue(strategy = SEQUENCE)
-    private Long userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @NotBlank(message = "Username is required")
     private String username;
     @NotBlank(message = "Password is required")
@@ -30,4 +29,12 @@ public class User {
     private String email;
     private Instant created;
     private boolean enabled;
+
+    @JsonIgnore
+    @OneToMany(mappedBy="user")
+    private Set<Post> posts;
+
+    @JsonIgnore
+    @OneToMany(mappedBy="user")
+    private Set<Comment> comments;
 }
