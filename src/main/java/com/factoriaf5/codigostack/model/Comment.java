@@ -1,5 +1,6 @@
 package com.factoriaf5.codigostack.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,19 +14,19 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 public class Comment {
     @Id
-    @GeneratedValue(strategy = SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
     private String text;
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "postId", referencedColumnName = "postId")
+    @JoinColumn(name = "post_id", nullable=false)
+    @JsonIgnore
     private Post post;
     private Instant createdDate;
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    @JoinColumn(name = "user_id", nullable=false)
     private User user;
 }
