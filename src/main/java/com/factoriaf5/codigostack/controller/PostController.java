@@ -26,4 +26,20 @@ public class PostController {
         return postService.findById(id);
     }
 
+    @PostMapping("/createpost")
+    public Post addPost(@RequestBody Post post) {
+        return postService.createPost(post);
+    }
+
+    @DeleteMapping("/deletepost/{id}")
+    public Post deletePost(@PathVariable Long id){
+        return postService.delete(id);
+    }
+
+    @PutMapping("/updatepost/{id}")
+    public Post updatePost(@RequestBody Post post) {
+        postService.findById(post.getId());
+        return postService.createPost(post);
+    }
+
 }
