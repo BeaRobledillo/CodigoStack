@@ -13,6 +13,7 @@ import java.util.List;
 public class PostService {
     private final PostRepository postRepository;
 
+    //mostrar todos los posts
     public List<Post> getAllPosts() {
         return  postRepository.findAll();
     }
@@ -23,5 +24,6 @@ public class PostService {
         3. borrar un post
         4. modificar un post
      */
+
 
 }
