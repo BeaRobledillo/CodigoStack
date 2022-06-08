@@ -5,6 +5,8 @@ import com.factoriaf5.codigostack.repository.PostRepository;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -16,6 +18,12 @@ public class PostService {
     public List<Post> getAllPosts() {
         return  postRepository.findAll();
     }
+
+    public Post findById (Long id) {
+        return postRepository.findById(id).orElse(null);
+    }
+
+
 
     /*
         1. crear un post

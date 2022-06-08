@@ -3,9 +3,7 @@ package com.factoriaf5.codigostack.controller;
 import com.factoriaf5.codigostack.model.Post;
 import com.factoriaf5.codigostack.service.PostService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,4 +20,10 @@ public class PostController {
     public List<Post> postList() {
         return postService.getAllPosts();
     }
+
+    @GetMapping("/list/{id}")
+    public Post findPostById(@PathVariable Long id) {
+        return postService.findById(id);
+    }
+
 }
