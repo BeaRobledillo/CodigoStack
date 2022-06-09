@@ -1,10 +1,15 @@
 package com.factoriaf5.codigostack.controller;
 
 import com.factoriaf5.codigostack.model.Post;
+import com.factoriaf5.codigostack.model.User;
+import com.factoriaf5.codigostack.repository.UserRepository;
 import com.factoriaf5.codigostack.service.PostService;
+import com.factoriaf5.codigostack.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -13,6 +18,7 @@ import java.util.List;
 public class PostController {
 
     private final PostService postService;
+    private final UserService userService;
 
     //
     @GetMapping("/list")
@@ -28,6 +34,10 @@ public class PostController {
 
     @PostMapping("/createpost")
     public Post addPost(@RequestBody Post post) {
+        User authUser = userService.findById(1L);
+
+        post.setUser(authUser);
+
         return postService.createPost(post);
     }
 

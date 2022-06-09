@@ -7,7 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import java.time.Instant;
+import java.sql.Timestamp;
 import java.util.Set;
 
 
@@ -27,8 +27,7 @@ public class User {
     @Email
     @NotEmpty(message = "Email is required")
     private String email;
-    private Instant created;
-    private boolean enabled;
+    private Timestamp created;
 
     @JsonIgnore
     @OneToMany(mappedBy="user")
@@ -37,4 +36,13 @@ public class User {
     @JsonIgnore
     @OneToMany(mappedBy="user")
     private Set<Comment> comments;
+
+    public User(String username, String password, String email, Timestamp created, boolean b, Set<Post> posts, Set<Comment> comments) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.created = created;
+        this.posts = posts;
+        this.comments = comments;
+    }
 }
