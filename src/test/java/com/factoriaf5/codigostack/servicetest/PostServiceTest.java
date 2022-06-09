@@ -59,4 +59,18 @@ public class PostServiceTest {
 
         }
 
+    @Test
+    void deletebyIdTest() {
+        //When
+        postServiceUnderTest.delete(1L);
+
+        ArgumentCaptor<Long> deleteIdArgumenCaptor = ArgumentCaptor.forClass(Long.class);
+        // Then
+        verify(postRepositoryMock).deleteById(deleteIdArgumenCaptor.capture());
+
+        Long caputredPostId = deleteIdArgumenCaptor.getValue();
+
+        assertThat(caputredPostId).isEqualTo(1L);
+    }
+
 }
