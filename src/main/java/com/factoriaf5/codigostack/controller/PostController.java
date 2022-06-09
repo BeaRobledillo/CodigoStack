@@ -23,7 +23,7 @@ public class PostController {
 
     @GetMapping("/list/{id}")
     public Post findPostById(@PathVariable Long id) {
-        return postService.findById(id);
+        return postService.postById(id);
     }
 
     @PostMapping("/createpost")
@@ -38,7 +38,7 @@ public class PostController {
 
     @PutMapping("/updatepost/{id}")
     public Post updatePost(@RequestBody Post post) {
-        postService.findById(post.getId());
+        postService.postById(post.getId());
         return postService.createPost(post);
     }
 

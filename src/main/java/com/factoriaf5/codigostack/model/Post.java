@@ -7,6 +7,7 @@ import org.springframework.lang.Nullable;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Set;
 
 
@@ -42,4 +43,7 @@ public class Post {
     private Set<Comment> comments;
 
     private Instant createdDate;
+
+    public Post(String title, String description, String url, LocalDate now) {
+    }
 }
