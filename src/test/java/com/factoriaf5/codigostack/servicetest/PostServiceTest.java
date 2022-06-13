@@ -55,6 +55,7 @@ public class PostServiceTest {
         //When
         Post post1 = new Post("Javascript with springboot principiantes","https://www.sololearn.com/profile/24621770", "Recomendo el curso gratuïto de sololearn" , LocalDate.now());
         postServiceUnderTest.createPost(post1);
+        //Then
         verify(postRepositoryMock).save(post1);
 
         }

@@ -29,4 +29,7 @@ public class Comment {
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "user_id", nullable=false)
     private User user;
+
+    public Comment(String commentario) {
+    }
 }
