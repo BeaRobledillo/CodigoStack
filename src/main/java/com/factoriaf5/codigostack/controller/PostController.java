@@ -46,10 +46,12 @@ public class PostController {
         return postService.delete(id);
     }
 
-    @PutMapping("/updatepost/{id}")
+    @PutMapping("/updatepost/")
     public Post updatePost(@RequestBody Post post) {
-        postService.findById(post.getId());
-        return postService.createPost(post);
+//        postService.findById(post.getId());
+
+        return postService.updatePost(post);
     }
+
 
 }
