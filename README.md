@@ -1,6 +1,13 @@
 # CodigoStack :technologist: :woman_technologist:	
 Under construction
 
+# Requeriments  :bookmark_tabs:
+
+- IntelliJ IDEA.
+- MySQL.
+- Visual Studio Code.
+- Browser.
+
 # Functionalities :floppy_disk:
 
 - Registrarse
@@ -22,6 +29,19 @@ Under construction
 - Spring Data JPA
 - Spring Security
 - MySQL
+
+# Tools :hammer:
+- Trello
+- Balsamiq 
+- Figma
+- Canva 
+- XAMPP
+- PhpMyAdmin
+- Visual Studio Code 
+- IntelliJ IDEA
+- Angular 
+- Vercel 
+
 
 # ScreenShoots :camera:
 
