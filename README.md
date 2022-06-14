@@ -1,5 +1,23 @@
 # CodigoStack :technologist: :woman_technologist:	
-Under construction
+
+Website for users interested in programming technologies, web 
+programming, web development...****
+
+Página web para usuarios interesados en tecnologías de 
+programación, desarrollo web...
+
+Spanish-speaking developers and design community and social network.
+
+Comunidad y red social de developers y design hispanohablante.
+
+Sharing is living - Publications and comments.
+
+Compartir es vivir - Publicaciones y comentarios.
+
+Videos, Tutorials and code.
+
+Videos, Tutoriales y código .
+
 
 # Requeriments  :bookmark_tabs:
 
