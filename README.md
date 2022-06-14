@@ -10,15 +10,15 @@ Under construction
 
 # Functionalities :floppy_disk:
 
-- Registrarse
-- Loguearse
-- Postear
-- Comentar
-- Editar 
-- Borrar 
-- Filtrar 
-- Buscar 
-- Paginación
+- Sign up / Registrarse
+- Log in / Loguearse
+- Post / Postear
+- Comment / Comentar
+- Edit / Editar 
+- Delete / Borrar 
+- Filter / Filtrar 
+- Search / Buscar 
+- Pagination / Paginación
 
 # 💻 Technologies
 
