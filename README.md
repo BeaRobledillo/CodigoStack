@@ -3,6 +3,15 @@ Under construction
 
 # Functionalities :floppy_disk:
 
+- Registrarse
+- Loguearse
+- Postear
+- Comentar
+- Editar 
+- Borrar 
+- Filtrar 
+- Buscar 
+- Paginación
 
 # 💻 Technologies
 
