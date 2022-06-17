@@ -15,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/posts/")
 @AllArgsConstructor
+@CrossOrigin(origins="http://localhost:4200/")
 public class PostController {
 
     private final PostService postService;
