@@ -38,7 +38,7 @@ public class PostServiceTest {
     }
 
     @Test
-    void postById() {
+    void postByIdTest() {
         //When
         postServiceUnderTest.postById(3L);
 
