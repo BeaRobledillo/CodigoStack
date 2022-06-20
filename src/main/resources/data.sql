@@ -1,3 +1,12 @@
 INSERT INTO roles(name) VALUES('ROLE_USER');
 
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+
+INSERT INTO users(created, email, password, username) VALUES ('2022-06-15 09:29:50','bea@hotmail.com','123456','bea');
+INSERT INTO user_roles(user_id, role_id) VALUES ('1','1');
+INSERT INTO user_roles(user_id, role_id) VALUES ('1','2');
+
+INSERT INTO post (created_date, description, post_name, url, vote_count,user_id) VALUES ('2022-06-15 09:29:50', 'Java es un lenguaje de programación y una plataforma informática que fue comercializada por primera vez en 1995 por Sun Microsystems. Hay muchas aplicaciones y sitios web que no funcionarán, probablemente, a menos que tengan Java instalado, y cada día se crean más. Java es rápido, seguro y fiable\r\n', 'Introducción para expertos en Java\r\n', 'https://images.unsplash.com/photo-1588239034647-25783cbfcfc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8amF2YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60\r\n', 2, 1);
+INSERT INTO post (created_date, description, post_name, url, vote_count, user_id) VALUES ('2022-06-16 09:20:01', 'Javascript es muy chuli. JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.', 'Intoducción a Javascript', 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80\n', 10, 1);
+INSERT INTO post (created_date, description, post_name, url, vote_count, user_id) VALUES  ('2022-06-15 09:29:50', 'JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.\r\n', 'Introducción JavaScript\r\n', 'https://desarrolloweb.com/storage/tag_images/actual/RMhVjjVD4x1sL1vNnEx6BBFITf9eaEPedch3nfqs.png', 2, 1);
+INSERT INTO post (created_date, description, post_name, url, vote_count, user_id) VALUES ('2022-06-20 00:00:00', 'Usa estilos bootstrap\r\nLogin con presencia limpia, clara y sencilla\r\nEs totalmente responsive\r\nEl código es el justo y necesario, todo está simplificado\r\nSu nombre es «ImLogin«', 'Login/Sign up con Bootstrap template', 'https://www.sliderrevolution.com/wp-content/uploads/2021/04/featured11.jpg', 10, 1);
