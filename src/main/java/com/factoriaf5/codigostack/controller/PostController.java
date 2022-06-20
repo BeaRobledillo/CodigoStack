@@ -2,17 +2,15 @@ package com.factoriaf5.codigostack.controller;
 
 import com.factoriaf5.codigostack.model.Post;
 import com.factoriaf5.codigostack.model.User;
-import com.factoriaf5.codigostack.repository.UserRepository;
 import com.factoriaf5.codigostack.service.PostService;
 import com.factoriaf5.codigostack.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Timestamp;
-import java.util.Collections;
+
 import java.util.List;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+
 @RestController
 @RequestMapping("/api/posts/")
 @AllArgsConstructor

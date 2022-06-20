@@ -2,13 +2,8 @@ package com.factoriaf5.codigostack.service;
 
 import com.factoriaf5.codigostack.model.Post;
 import com.factoriaf5.codigostack.repository.PostRepository;
-
-import com.factoriaf5.codigostack.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import java.util.List;
 
 @Service
