@@ -33,9 +33,9 @@ public class User {
     @NotBlank(message = "Password is required")
     @Size(max = 150)
     private String password;
-    @Email
+    @NotBlank
     @Size(max = 50)
-    @NotEmpty(message = "Email is required")
+    @Email
     private String email;
     private Timestamp created;
 
@@ -55,7 +55,7 @@ public class User {
 
 
 
-    public User(String username, String password, String email) {
+    public User(String username,String email, String password) {
         this.username = username;
         this.password = password;
         this.email = email;
