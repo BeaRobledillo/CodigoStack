@@ -1,7 +1,14 @@
 package com.factoriaf5.codigostack;
 
+import com.factoriaf5.codigostack.model.User;
+import com.factoriaf5.codigostack.repository.UserRepository;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import java.sql.Timestamp;
+import java.util.Collections;
 
 
 @SpringBootApplication
