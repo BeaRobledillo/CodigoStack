@@ -29,7 +29,7 @@ public class PostController {
 
     @GetMapping("/list/{id}")
     public Post findPostById(@PathVariable Long id) {
-        return postService.findById(id);
+        return postService.postById(id);
     }
 
     @PostMapping("/createpost")
